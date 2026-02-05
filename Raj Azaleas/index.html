@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxury Living Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+
+</head>
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Luxury Living Coming Soon</h1>
+      <p>An Exclusive Residential Address in the Heart of the City</p>
+      <button class="openForm hero-btn">Get Early Access</button>
+
+    </div>
+  </header>
+
+<!-- Popup Modal -->
+<div class="modal" id="enquiryModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Get Early Access</h2>
+    <form id="enquiryForm">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+  <button type="submit">Submit</button>
+</form>
+<div class="success-box" id="successBox">
+  <div class="checkmark">✔</div>
+  <h3>Thank You!</h3>
+  <p>Your enquiry has been received. Our team will contact you soon.</p>
+</div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo/logo.png" alt="Raj Azaleas">
+  </div>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#plans">Plans</a></li>
+    <li><a href="#location">Location</a></li>
+    
+  </ul>
+<!-- <li><button class="openForm nav-btn mobile-btn">Schedule Visit</button></li> -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<div class="floating-call openForm">
+  📞
+</div>
+
+
+
+<section id="vision" class="vision">
+  <div class="vision-container">
+
+    <div class="vision-left">
+      <span class="vision-tag">THE VISION</span>
+      <h2>Architecture<br>Reimagined</h2>
+
+      <p class="vision-text">
+        "Elysian Heights is not just a building; it is a testament to the pursuit of perfection.
+        Every curve is designed to capture light, and every space is crafted for tranquility."
+      </p>
+
+      <div class="vision-line"></div>
+
+      <div class="vision-stats">
+        <div>
+          <h3>42</h3>
+          <span>FLOORS OF LUXURY</span>
+        </div>
+        <div>
+          <h3>120</h3>
+          <span>BESPOKE HOMES</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vision-right">
+      <img src="images/banner.png" alt="Luxury Interior">
+    </div>
+
+  </div>
+</section>
+
+
+<section id="amenities" class="amenities">
+  <span class="amenities-tag">PRIVILEGES</span>
+  <h2 class="amenities-title">THE ELYSIAN EXPERIENCE</h2>
+
+  <div class="amenities-grid">
+
+    <div class="amenity-card">
+      <div class="icon">〰</div>
+      <h3>Infinity Pool</h3>
+      <p>Panoramic city views from the 42nd floor.</p>
+    </div>
+
+    <div class="amenity-card">
+      <div class="icon">💨</div>
+      <h3>Wellness Spa</h3>
+      <p>Holistic treatments and thermal suites.</p>
+    </div>
+
+    <div class="amenity-card">
+      <div class="icon">🎞</div>
+      <h3>Private Cinema</h3>
+      <p>Bespoke 20-seat Dolby Atmos theater.</p>
+    </div>
+
+    <div class="amenity-card">
+      <div class="icon">🔔</div>
+      <h3>Concierge</h3>
+      <p>White-glove service available 24/7.</p>
+    </div>
+
+    <div class="amenity-card">
+      <div class="icon">🍃</div>
+      <h3>Sky Gardens</h3>
+      <p>Lush greenery amidst the clouds.</p>
+    </div>
+
+    <div class="amenity-card">
+      <div class="icon">🍸</div>
+      <h3>Private Club</h3>
+      <p>Exclusive bar and social lounge.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- floorpln -->
+
+<section id="plans" class="plans">
+  <span class="plans-tag">THE COLLECTION</span>
+  <h2 class="plans-title">EXCLUSIVE FLOOR PLANS</h2>
+
+  <div class="plan-tabs">
+    <button class="tab active" data-type="2bhk">2 BHK</button>
+    <button class="tab" data-type="3bhk">3 BHK</button>
+    <button class="tab" data-type="4bhk">4 BHK</button>
+  </div>
+
+  <div class="plan-card">
+    <div class="plan-image">
+      <img id="planImg" src="images/banner.png" alt="Floor Plan">
+      <div class="plan-dots" id="planDots"></div>
+    </div>
+
+    <div class="plan-info">
+      <h3 id="planTitle">The Azure Suite</h3>
+      <span id="planSub" class="sub">2 BHK RESIDENCE</span>
+
+      <div class="details">
+        <div>
+          <small>Total Area</small>
+          <strong id="planArea">1,450 sq.ft.</strong>
+        </div>
+        <div>
+          <small>Exposure</small>
+          <strong id="planView">City Skyline</strong>
+        </div>
+      </div>
+
+      <button class="openForm plan-btn">Enquire Now</button>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="location-section">
+  <p class="location-tag">THE NEIGHBORHOOD</p>
+  <h2 class="location-title">A CENTRAL LANDMARK</h2>
+
+  <div class="location-wrap">
+    <div class="location-image">
+      <img src="images/banner.png" alt="Location">
+      <span class="map-pin"></span>
+      <div class="location-image" onclick="openMap()">
+ 
+  <span class="map-pin"></span>
+</div>
+    </div>
+
+    <div class="location-info">
+      <h3>Location Highlights</h3>
+
+      <div class="loc-item">
+        <span>📍</span>
+        <p>Central Park</p>
+        <small>5 mins walk</small>
+      </div>
+
+      <div class="loc-item">
+        <span>📍</span>
+        <p>The Grand Mall</p>
+        <small>8 mins drive</small>
+      </div>
+
+      <div class="loc-item">
+        <span>📍</span>
+        <p>International Airport</p>
+        <small>25 mins drive</small>
+      </div>
+    </div>
+  </div>
+
+  <div id="mapModal" class="map-modal">
+  <div class="map-box">
+    <span class="close-map" onclick="closeMap()">×</span>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28840.402309932088!2d77.54516780376434!3d12.93382341298164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15354aa7e8ad%3A0x789257d9ee17389!2sSNN%20RAJ%20CORP!5e1!3m2!1sen!2sin!4v1769850153152!5m2!1sen!2sin"
+      allowfullscreen 
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+</section>
+
+
+<!-- Spesification -->
+
+ <section class="specifications" id="specifications">
+  <div class="container">
+    <h2>Crafted for Refined Living</h2>
+    <p class="spec-intro">
+      Every element at Raj Azaleas is thoughtfully curated to deliver elegance, comfort, and long-lasting value.
+    </p>
+
+    <div class="spec-grid">
+      <div class="spec-item"><strong>Structure</strong><span>RCC framed structure with seismic resistance.</span></div>
+      <div class="spec-item"><strong>Flooring</strong><span>Premium vitrified tiles in living & bedrooms.</span></div>
+      <div class="spec-item"><strong>Doors & Windows</strong><span>Engineered wooden doors and UPVC windows.</span></div>
+      <div class="spec-item"><strong>Kitchen</strong><span>Granite countertop with modular kitchen provision.</span></div>
+      <div class="spec-item"><strong>Bathrooms</strong><span>Branded CP fittings and premium sanitary ware.</span></div>
+      <div class="spec-item"><strong>Electrical</strong><span>Concealed copper wiring with modular switches.</span></div>
+      <div class="spec-item"><strong>Painting</strong><span>Premium interior emulsion and weather-proof exterior paint.</span></div>
+      <div class="spec-item"><strong>Security</strong><span>CCTV, video door phone & controlled access.</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery -->
+
+<section class="gallery-section" id="gallery">
+  <h2 class="section-title dark">Project Gallery</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-card"><img src="images/banner.png" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery2.jpg" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery3.jpg" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery4.jpg" onclick="openGallery(this.src)"></div>
+
+    <div class="gallery-card"><img src="images/gallery5.jpg" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery6.jpg" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery7.jpg" onclick="openGallery(this.src)"></div>
+    <div class="gallery-card"><img src="images/gallery8.jpg" onclick="openGallery(this.src)"></div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="close-gallery" onclick="closeGallery()">×</span>
+  <img id="galleryPreview">
+</div>
+
+
+<!-- Footer -->
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h2 class="footer-logo">ELYSIAN</h2>
+      <p>Redefining the skyline with iconic architectural landmarks designed for the few who appreciate true elegance.</p>
+
+    <div class="footer-contact">
+  <p>📞 <a href="tel:+18003597426">+1 800 ELYSIAN</a></p>
+  <p>✉ <a href="mailto:concierge@elysian.com">concierge@elysian.com</a></p>
+</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Access</h4>
+      <ul>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>About The Group</h4>
+      <p>
+        “Elysian Group International is a premier global developer specializing in high-end luxury estates. With a portfolio spanning the world’s most vibrant cities, we build legends, not just buildings.”
+      </p>
+
+     <div class="footer-social">
+  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Elysian Group International</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="js/script.js"></script>
+
+<script>
+function openGallery(src){
+  const modal = document.getElementById("galleryModal");
+  const preview = document.getElementById("galleryPreview");
+
+  modal.style.display = "flex";
+  preview.src = src;
+}
+
+function closeGallery(){
+  document.getElementById("galleryModal").style.display = "none";
+}
+</script>
+
+
+<script>
+function openMap() {
+  document.getElementById("mapModal").style.display = "flex";
+}
+
+function closeMap() {
+  document.getElementById("mapModal").style.display = "none";
+}
+</script>
+
+<!-- navbar -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+
+  if (!hamburger || !navMenu) {
+    console.log("Hamburger or menu not found");
+    return;
+  }
+
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    console.log("Menu toggled");
+  });
+
+  // close menu when clicking a link
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+
+});
+</script>
+
+<!-- Country code -->
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
+
+<script>
+const input = document.querySelector("#phone");
+
+window.intlTelInput(input, {
+  initialCountry: "auto",
+  geoIpLookup: callback => {
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => callback(data.country_code))
+      .catch(() => callback("in"));
+  },
+  separateDialCode: true,
+});
+</script>
+
+
+</body>
+
+
+</body>
+</html>
+
+
